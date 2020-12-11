@@ -4,7 +4,7 @@ import { useBreakpoint } from "gatsby-plugin-breakpoints"
 // import Logo from "../../assets/logoDLT.svg"
 import { FaBars as MenuIcon } from "react-icons/fa"
 import { FaTimes as CloseIcon } from "react-icons/fa"
-import NavLinks from "./NavLinks"
+import NavLinks from "../NavLinks/NavLinks"
 
 import "./Header.scss"
 
@@ -16,22 +16,20 @@ const Header = () => {
     setShowMenu(currentState => !currentState)
   }
 
-
   return (
- 
-      <div className="header ">
-        <Link to="/" onClick={toggleNav}>
-          LOGO
-          {/* <Logo className="logo" /> */}
-        </Link>
-        {showMenu ? (
-          <CloseIcon className="toggle-menu" onClick={toggleNav} />
-        ) : (
-          <MenuIcon className="toggle-menu" onClick={toggleNav} />
-        )}
-        {showMenu && breakpoints.md ? <NavLinks toggleNav={toggleNav} /> : null}
-        {breakpoints.md ? null : <NavLinks toggleNav={toggleNav} />}
-      </div>
+    <div className="header ">
+      <Link to="/" onClick={toggleNav}>
+        LOGO
+        {/* <Logo className="logo" /> */}
+      </Link>
+      {showMenu ? (
+        <CloseIcon className="toggle-menu" onClick={toggleNav} />
+      ) : (
+        <MenuIcon className="toggle-menu" onClick={toggleNav} />
+      )}
+      {showMenu && breakpoints.md ? <NavLinks toggleNav={toggleNav} /> : null}
+      {breakpoints.md ? null : <NavLinks toggleNav={toggleNav} />}
+    </div>
   )
 }
 export default Header
