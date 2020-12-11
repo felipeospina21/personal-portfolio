@@ -1,42 +1,37 @@
+import React, { useState } from "react"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { useBreakpoint } from "gatsby-plugin-breakpoints"
+// import Logo from "../../assets/logoDLT.svg"
+import { FaBars as MenuIcon } from "react-icons/fa"
+import { FaTimes as CloseIcon } from "react-icons/fa"
+import NavLinks from "./NavLinks"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+import "./Header.scss"
+
+const Header = () => {
+  const [showMenu, setShowMenu] = useState(false)
+  const breakpoints = useBreakpoint()
+
+  function toggleNav() {
+    setShowMenu(currentState => !currentState)
+  }
+
+
+  return (
+ 
+      <div className="header ">
+        <Link to="/" onClick={toggleNav}>
+          LOGO
+          {/* <Logo className="logo" /> */}
         </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+        {showMenu ? (
+          <CloseIcon className="toggle-menu" onClick={toggleNav} />
+        ) : (
+          <MenuIcon className="toggle-menu" onClick={toggleNav} />
+        )}
+        {showMenu && breakpoints.md ? <NavLinks toggleNav={toggleNav} /> : null}
+        {breakpoints.md ? null : <NavLinks toggleNav={toggleNav} />}
+      </div>
+  )
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Header
