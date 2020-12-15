@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { useBreakpoint } from "gatsby-plugin-breakpoints"
-// import Logo from "../../assets/logoDLT.svg"
+
+import { ImPower as Logo } from "react-icons/im"
 import { FaBars as MenuIcon } from "react-icons/fa"
 import { FaTimes as CloseIcon } from "react-icons/fa"
 import NavLinks from "../NavLinks/NavLinks"
@@ -19,8 +20,7 @@ const Header = () => {
   return (
     <div className="header ">
       <Link to="/" onClick={toggleNav}>
-        LOGO
-        {/* <Logo className="logo" /> */}
+        <Logo className="logo" />
       </Link>
       {showMenu ? (
         <CloseIcon className="toggle-menu" onClick={toggleNav} />

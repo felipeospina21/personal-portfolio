@@ -1,3 +1,11 @@
+
+:root{
+--clr-darker-blue: #242633;
+--clr-lighter-blue: #3e4254;
+--clr-contrast: #e3a93b;
+--clr-text:#fffeff;
+}
+
 *,
 *::before,
 *::after {
@@ -11,8 +19,7 @@ html {
 	height: 100%;
 	font-family: 'Montserrat', sans-serif;
 	overflow: auto;
-	margin-right: 0.2rem;
-	margin-left: 0.1rem;
+	margin: 0;
 }
 
 ul {

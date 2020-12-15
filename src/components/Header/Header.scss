@@ -12,21 +12,26 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+    background-color:var(--clr-lighter-blue)  ;
+	
 }
 
 .logo {
 	display: flex;
 	align-items: center;
-	margin: auto 1em;
-	min-width: 150px;
-	max-width: 300px;
-	max-height: 94px;
-	width: 200px;
+	margin:0.7em 1em;
+	font-size: 1.5rem;
+	color: var(--clr-contrast);
+	// min-width: 150px;
+	// max-width: 300px;
+	// max-height: 94px;
+	// width: 200px;
 }
 
 .toggle-menu {
-    font-size: 1.5rem;
-    color: black;
+	font-size: 1.5rem;
+	margin: auto 1em;
+	color: var(--clr-contrast);
 	background: transparent;
 	border-color: transparent;
 	cursor: pointer;

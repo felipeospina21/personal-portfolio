@@ -1,0 +1,25 @@
+.services-card{
+    width: 100%;
+    height:150px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 0.5em;
+    margin: 0.5em ;
+    background-color: var(--clr-lighter-blue);
+    // overflow-wrap: break-word;
+
+    & h3{
+        color: var(--clr-contrast);
+    }
+
+    & p {
+        font-size: 0.9rem;
+    }
+}
+
+.service-card-logo{
+    color: red;
+    width: 40px;
+}

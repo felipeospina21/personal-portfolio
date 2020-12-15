@@ -1,0 +1,32 @@
+
+.hero-wrapper{
+    height: 50vh;
+    background:var(--clr-lighter-blue) ;
+    color: var(--clr-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container{
+    margin: 1em ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & h3{
+        text-align: center;
+        margin: 1em 0;
+    }
+}
+
+.hero-btn{
+    background-color: var(--clr-contrast);
+    color: var(--clr-darker-blue);
+    padding: 0.8em 1.8em;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+}
