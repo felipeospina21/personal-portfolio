@@ -4,6 +4,7 @@
 --clr-lighter-blue: #3e4254;
 --clr-contrast: #e3a93b;
 --clr-text:#fffeff;
+--main-font: 'Montserrat', sans-serif;
 }
 
 *,
@@ -17,9 +18,10 @@
 body,
 html {
 	height: 100%;
-	font-family: 'Montserrat', sans-serif;
+	font-family: var(--main-font);
 	overflow: auto;
 	margin: 0;
+	background-color: var(--clr-darker-blue);
 }
 
 ul {
@@ -36,6 +38,15 @@ div {
 	margin: auto;
 }
 
+input, label, textarea{
+	font: 400 16px var(--main-font);
+}
+
 button {
 	cursor: pointer;
+	font :400 0.825rem var(--main-font)
+}
+
+label,h1,h2,h3,h4,h5,h6{
+    letter-spacing: 0.075rem;
 }
