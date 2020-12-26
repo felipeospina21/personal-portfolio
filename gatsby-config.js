@@ -12,17 +12,13 @@ module.exports = {
 	},
 	plugins: [
 		{
-			resolve: `gatsby-plugin-prefetch-google-fonts`,
-			options: {
-				fonts: [
-					{
-						family: `Montserrat`,
-						subsets: [`latin`],
-						variants: [`300`, `400`, `600`, `700`]
-					}
-				]
-			}
-		},
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Montserrat']
+        }
+      }
+    },
 		`gatsby-plugin-netlify-cms`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-sass`,
