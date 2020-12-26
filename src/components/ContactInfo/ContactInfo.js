@@ -4,7 +4,7 @@ const ContactInfo = () => (
 	<>
 		<h3>Address</h3>
 		<span>
-			David Mathews
+			Felipe Ospina
 			<br />
 			1011 Malesuada Road
 			<br />

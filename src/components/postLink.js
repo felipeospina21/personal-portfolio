@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import ImageBlog from './imageBlog';
+import ImageBlog from './ImageBlog';
 
 import './postLink.scss';
 

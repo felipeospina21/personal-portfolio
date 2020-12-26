@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import ImageBlog from '../components/imageBlog';
+import ImageBlog from '../components/ImageBlog';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import SEO from '../components/seo';
 
