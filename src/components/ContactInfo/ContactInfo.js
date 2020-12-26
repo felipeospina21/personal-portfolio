@@ -1,5 +1,5 @@
 import React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { Styled } from 'theme-ui'
 
 const ContactInfo = () => (
  <>

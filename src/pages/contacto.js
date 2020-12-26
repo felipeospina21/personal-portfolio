@@ -5,7 +5,7 @@ const contacto = () => {
 	return (
 		<div>
 
-			{/* <ContactInfo /> */}
+			<ContactInfo />
 		</div>
 	);
 };

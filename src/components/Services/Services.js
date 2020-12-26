@@ -8,7 +8,7 @@ import ScriptIcon from '../../assets/script.svg';
 import './Services.scss';
 
 const Services = () => {
-	const [services, setServices] = useState([
+	const [services] = useState([
 		{
 			type: 'Páginas Web',
 			description: 'Desarrollamos páginas web rápidas y seguras',

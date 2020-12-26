@@ -42,7 +42,14 @@ module.exports = {
 				path: `${__dirname}/content/blog`
 			}
 		},
-		`gatsby-transformer-remark`,
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `blog-images`,
+				path: `${__dirname}/static/img`
+			}
+		},
+		// `gatsby-transformer-remark`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -52,6 +59,12 @@ module.exports = {
 		},
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
+		{
+			resolve: `gatsby-plugin-mdx`,
+			options: {
+				extensions: [`.md`, `.mdx`]
+			}
+		},
 		// {
 		// 	resolve: `gatsby-theme-contact`,
 		// 	options: {
