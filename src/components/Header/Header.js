@@ -22,13 +22,14 @@ const Header = () => {
       <Link to="/" onClick={toggleNav}>
         <Logo className="logo" />
       </Link>
-      {showMenu ? (
+      <NavLinks/>
+      {/* {showMenu ? (
         <CloseIcon className="toggle-menu" onClick={toggleNav} />
       ) : (
         <MenuIcon className="toggle-menu" onClick={toggleNav} />
       )}
       {showMenu && breakpoints.md ? <NavLinks toggleNav={toggleNav} /> : null}
-      {breakpoints.md ? null : <NavLinks toggleNav={toggleNav} />}
+      {breakpoints.md ? null : <NavLinks toggleNav={toggleNav} />} */}
     </div>
   )
 }

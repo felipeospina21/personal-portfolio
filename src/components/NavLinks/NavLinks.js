@@ -7,21 +7,6 @@ function NavLinks({ toggleNav }) {
   return (
     <ul className="nav-links">
       <li>
-        <Link to="/" onClick={toggleNav}>
-          Inicio
-        </Link>
-      </li>
-      <li>
-        <Link to="/conocenos" onClick={toggleNav}>
-          Conócenos
-        </Link>
-      </li>
-      <li>
-        <Link to="/portafolio" onClick={toggleNav}>
-          Portafolio
-        </Link>
-      </li>
-      <li>
         <Link to="/blog" onClick={toggleNav}>
           Blog
         </Link>
