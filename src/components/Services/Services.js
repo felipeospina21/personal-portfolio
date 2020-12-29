@@ -28,15 +28,7 @@ const Services = () => {
 
 	return (
 		<div className='services-container'>
-			<div className='services-info-container'>
 				<h2>Servicios</h2>
-				<section className='services-section-1'>
-					Alguna informacion estadistica sobre nuestros diseños y webs
-				</section>
-				<section className='services-section-2'>
-					otra informacion o infografias que acompañen o resaleten estos datos
-				</section>
-			</div>
 			<div className='services-cards-container'>
 				{services.map(service => {
 					const { type, description, icon } = service;

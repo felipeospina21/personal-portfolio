@@ -3,31 +3,11 @@
     background-color:var(--clr-darker-blue);
     color: var(--clr-text);
     margin: 2em auto;
-}
-
-.services-info-container{
-    height: 20vh;
-    margin: 0.5em;
-    // background-color: red;
 
     & h2{
         margin: 0.5em auto 1em auto;
         text-align: center;
     }
-}
-
-.services-section-1, .services-section-2{
-    width: 46%;
-    margin: 0.3em;
-    // border: 1px solid black;
-}
-
-.services-section-1{
-    float: left;
-}
-
-.services-section-2{
-    float: right;
 }
 
 .services-cards-container{

@@ -1,0 +1,19 @@
+.infographics-section-1, .infographics-section-2{
+    width: 46%;
+    margin: 0.3em;
+    // border: 1px solid black;
+}
+
+.infographics-section-1{
+    float: left;
+}
+
+.infographics-section-2{
+    float: right;
+}
+
+.infographics-container{
+    height: 20vh;
+    margin: 2em 0.5em;
+    background-color: var(--clr-contrast);
+}
