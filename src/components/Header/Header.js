@@ -19,8 +19,8 @@ const Header = () => {
 
   return (
     <div className="header ">
-      <Link to="/" onClick={toggleNav}>
-        <Logo className="logo" />
+      <Link to="/" className="logo"  onClick={toggleNav}>
+        <Logo />
       </Link>
       <NavLinks/>
       {/* {showMenu ? (

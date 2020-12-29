@@ -1,12 +1,16 @@
 
 .hero-wrapper{
     height: 50vh;
-    background:var(--clr-lighter-blue) ;
+    // background:var(--clr-lighter-blue) ;
+    // background-color: black;
     color: var(--clr-text);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    
+
 }
 
 .hero-container{
@@ -15,11 +19,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
 
     & h3{
         text-align: center;
         margin: 1em 0;
     }
+
 }
 
 .hero-btn{
@@ -29,4 +35,13 @@
     font-weight: 700;
     border: none;
     border-radius: 5px;
+    position: absolute;
+    bottom: 25px;
+
+}
+
+.hero-img{
+    width: 100%;
+    opacity: 0.3;
+    height: 100%;
 }

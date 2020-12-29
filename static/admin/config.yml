@@ -18,6 +18,27 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Imagen", name: "thumbnail", widget: "image" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - label: "Tags"
+        name: "tags"
+        widget: "relation" 
+        collection: "categories"
+        search_fields: ["name"]
+        value_field: "name"
+        multiple: true
       - { label: "Body", name: "body", widget: "markdown" }
-      
+
+
+  - label: "Categories"
+    name: "categories"
+    files:   
+      - label: "Blog Categories"
+        name: "blogCategories"
+        file: "content/categories.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - label: Categories
+            name: categories
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+           

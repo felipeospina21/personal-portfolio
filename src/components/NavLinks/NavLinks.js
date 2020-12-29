@@ -11,11 +11,6 @@ function NavLinks({ toggleNav }) {
           Blog
         </Link>
       </li>
-      <li>
-        <Link to="/contacto" onClick={toggleNav}>
-          Contacto
-        </Link>
-      </li>
     </ul>
   )
 }
