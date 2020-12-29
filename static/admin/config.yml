@@ -22,8 +22,8 @@ collections:
         name: "tags"
         widget: "relation" 
         collection: "categories"
-        search_fields: ["name"]
-        value_field: "name"
+        search_fields: ["categories.name"]
+        value_field: "categories.name"
         multiple: true
       - { label: "Body", name: "body", widget: "markdown" }
 
@@ -35,10 +35,10 @@ collections:
         name: "blogCategories"
         file: "content/categories.yml"
         fields:
-          - {label: Title, name: title, widget: string}
-          - label: Categories
-            name: categories
-            widget: list
+          - {label: "Title", name: "title", widget: "string"}
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
             fields:
-              - {label: Name, name: name, widget: string}
+              - {label: "Name", name: "name", widget: "list", allow_add: true}
            
