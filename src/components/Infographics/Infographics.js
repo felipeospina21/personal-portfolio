@@ -1,17 +1,20 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import './Infographics.scss';
 
 const Infographics = () => {
+	const [facts] = useState([
+		'el 80% de las personas busca una empresa en internet antes de comprarle',
+		'Tu negocio tiene visibilidad 24/7'
+	]);
 	return (
-		<div  className='infographics-container'>
-			<section className='infographics-section-1'>
-				Visibilidad de tus productos y/o servicios 24/7
-			</section>
-			<section className='infographics-section-2'>
-				Aproximadamente un 80% de las personas buscan en internet antes de realizar una
-				compra.
-			</section>
+		<div className='Infographics-container'>
+			{facts.map((fact, index) => {
+				return (
+					<section key={index} className='Infographics-section'>
+						<p>{fact}</p>
+					</section>
+				);
+			})}
 		</div>
 	);
 };

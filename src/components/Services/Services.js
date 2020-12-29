@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import ServicesCard from '../ServicesCard/ServicesCard';
-
 import WebIcon from '../../assets/web.svg';
 import AppIcon from '../../assets/app.svg';
 import ScriptIcon from '../../assets/script.svg';
@@ -10,30 +9,39 @@ import './Services.scss';
 const Services = () => {
 	const [services] = useState([
 		{
-			type: 'Páginas Web',
-			description: 'Desarrollamos páginas web rápidas y seguras',
+			title: 'Velocidad',
+			description:
+				'Tu página tendrá una velocidad de carga incomparable, mejorando la experiencia del usuario.',
 			icon: <WebIcon className='service-card-logo' />
 		},
 		{
-			type: 'Aplicaciones Web',
-			description: 'Desarrollamos aplicaciones web para tu negocio y tus clientes',
+			title: 'Seguridad',
+			description:
+				'Puedes estar tranquilo con la seguridad de tu página web ante acciones maliciosas como los famosos ataques DDOS.',
 			icon: <AppIcon className='service-card-logo' />
 		},
 		{
-			type: 'Automatizaciones',
-			description: 'Automatizamos procesos repetitivos y tediosos',
+			title: 'Escalabilidad',
+			description:
+				'Tu página puede crecer según tus necesidades de manera fácil',
 			icon: <ScriptIcon className='service-card-logo' />
+		},
+		{
+			title: 'Accesibilidad',
+			description:
+				'Todas las personas podrán acceder a tu página, sin importar si tienen limitaciones físicas.',
+			icon: <WebIcon className='service-card-logo' />
 		}
 	]);
 
 	return (
 		<div className='services-container'>
-				<h2>Servicios</h2>
+				<h2>Beneficios</h2>
 			<div className='services-cards-container'>
 				{services.map(service => {
-					const { type, description, icon } = service;
+					const { title, description, icon } = service;
 					return (
-						<ServicesCard key={type} title={type} description={description} icon={icon} />
+						<ServicesCard key={title} title={title} description={description} icon={icon} />
 					);
 				})}
 			</div>

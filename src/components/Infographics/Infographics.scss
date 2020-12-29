@@ -1,19 +1,13 @@
-.infographics-section-1, .infographics-section-2{
-    width: 46%;
-    margin: 0.3em;
-    // border: 1px solid black;
-}
-
-.infographics-section-1{
-    float: left;
-}
-
-.infographics-section-2{
-    float: right;
-}
-
-.infographics-container{
-    height: 20vh;
+.Infographics-container{
+    // height: 50vh;
+    width: 100%;
     margin: 2em 0.5em;
+    padding: 0.5em 0;
     background-color: var(--clr-contrast);
 }
+
+.Infographics-section{
+    margin: 1em 0.5em;
+}
+
+
