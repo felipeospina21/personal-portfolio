@@ -1,5 +1,5 @@
 .nav-links {
-	// height: 10em;
+	// float: right;
 	padding-bottom: 0.5em;
 	font-weight: 400;
 	font-size: 1.2rem;
@@ -8,8 +8,15 @@
 	margin: auto;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
+	align-items:center;
+	// justify-content: right;
+
+	& li {
+		// float: right;
+		display: flex;
+		justify-content: right;
+		margin: 0;
+	}
 
 	& a {
 		color: var(--clr-primary);
@@ -30,7 +37,7 @@
 
 		& li {
 			display: flex;
-			justify-content: space-between;
+			justify-content: right;
 			padding: 0;
 			margin: 0;
 		}
