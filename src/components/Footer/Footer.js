@@ -8,8 +8,8 @@ const Footer = () => {
 		<div>
 			<div className='footer'>
 				<div className='footer-contact'>
-					<p>Medellin, Colombia</p>
-					<p>telefono o correo</p>
+					<p>Medellín, Colombia</p>
+					{/* <p>telefono o correo</p> */}
 				</div>
 				<div className='social-logos-wrapper'>
 					<a href='https://www.instagram.com/automata.dev' rel='noreferrer' target='_blank'>

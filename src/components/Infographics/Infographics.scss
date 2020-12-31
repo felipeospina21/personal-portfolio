@@ -1,13 +1,16 @@
 .Infographics-container{
     // height: 50vh;
-    width: 100%;
     margin: 2em 0.5em;
     padding: 0.5em 0;
     background-color: var(--clr-contrast);
+    display: grid;
+    grid: 1fr / 1fr 1fr;
 }
 
 .Infographics-section{
     margin: 1em 0.5em;
+    // border-right: 1px solid black;
+    // border-left: 1px solid black;
 }
 
 

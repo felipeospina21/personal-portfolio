@@ -9,9 +9,9 @@ const Hero = () => {
 			<Image className='hero-img' src='background3.jpg' />
 			<div className='hero-container'>
 				<h1>Hola, soy Felipe</h1>
-				<h3>Dejame ayudarte a mejorar tu presencia online</h3>
+				<h3>Me especializo en crear páginas web hechas a la medida.</h3>
 			</div>
-			<SocialContainer/>
+			<SocialContainer />
 			<button className='hero-btn'>Conversemos</button>
 		</div>
 	);
