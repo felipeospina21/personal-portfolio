@@ -1,8 +1,11 @@
+@import '../../styles/breakingPoints.scss';
+
 .services-container{
     width: 100%;
     background-color:var(--clr-darker-blue);
     color: var(--clr-text);
     margin: 2em auto;
+    max-width: 1100px;
 
     & h2{
         margin: 0.5em auto 1em auto;
@@ -13,6 +16,16 @@
 .services-cards-container{
     display: flex;
     flex-wrap: wrap;
-    // margin: 0;
+    justify-content: center;
+    margin: auto;
     width: 100%;
+
+}
+
+@media screen and (min-width:$screen-xs){
+    .services-cards-container{
+        display: grid;
+        grid: 1fr 1fr/ 1fr 1fr;
+    }
+
 }
