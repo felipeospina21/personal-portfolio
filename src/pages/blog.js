@@ -14,7 +14,7 @@ const BlogPageTemplate = ({
 	return (
 		<Layout>
 			<SEO title='Blog' />
-			<h2 className='blog-page-title'>Recetas</h2>
+			<h2 className='blog-page-title'>Blog</h2>
 			<div className='post-link-wrapper'>
 				{edges.map(edge => (
 					<PostLink key={edge.node.id} post={edge.node} />

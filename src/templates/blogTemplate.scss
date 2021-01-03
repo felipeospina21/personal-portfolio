@@ -19,6 +19,8 @@
 
 
 .blog-post{
+    padding: 0 1em;
+
     & h1,h2,h3,h4,h5,h6,p{
         margin-top: 1.5em;
         }
@@ -48,6 +50,9 @@
 
     & .blog-post-title{
         margin: 0.5em auto;
+    }
+    & p, ul, ol{
+        line-height: 1.5;
     }
 }
 
