@@ -8,23 +8,16 @@ import '../components/PostPreview/PostPreview.scss';
 import TagsFilter from '../components/TagsFilter/TagsFilter';
 
 
-const BlogPageTemplate = ({
-	data: {
-		allMdx: { edges }
-	}
-}) => {
+const BlogPageTemplate = ({data}) => {
+
 	return (
 		<Layout>
 			<SEO title='Blog' />
 			<h1 className='blog-page-title'>Blog</h1>
 			<p className='blog-page-excerpt'>Acá podrás encontrar artículos cortos sobre desarrollo web y tecnología.</p>
-			<div>
-				{edges.map(edge=>{
-					return <TagsFilter key={edge.node.id} tags={edge.node.frontmatter.tags}/>
-				})}
-			</div>
+			<TagsFilter categories={data.contentYaml.categories}/>
 			<div className='post-link-wrapper'>
-				{edges.map(edge => (
+				{data.allMdx.edges.map(edge => (
 					<PostPreview key={edge.node.id} post={edge.node} />
 				))}
 			</div>
@@ -51,6 +44,11 @@ export const BlogPageQuery = graphql`
 						slug
 					}
 				}
+			}
+		}
+		contentYaml {
+			categories {
+				name
 			}
 		}
 	}

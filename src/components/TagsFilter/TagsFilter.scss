@@ -1,0 +1,32 @@
+.tags-filter-wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    justify-content: left;
+
+    // border-top: 1px solid rgba(119, 117, 117, 0.4);
+    // border-bottom: 1px solid rgba(119, 117, 117, 0.4);
+    padding: 0.5em 1em;
+    margin: 1.5em auto;
+
+}
+
+.tags-filter-title{
+    margin: 0 1em ;
+    color: teal;
+}
+.tags-filter-container{
+    margin: 0;
+    display: flex;
+    flex-wrap:wrap;
+    // justify-content: center;
+    
+}
+
+.tags-filter-categorie{
+    margin:0.5em 0.2em;
+    border: 1px solid var(--clr-text);
+    border-radius: 5px;
+    padding: 0.4em 0.7em;
+    // background-color: rgba(0, 128, 128, 0.2);
+}
