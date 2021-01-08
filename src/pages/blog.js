@@ -1,10 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import PostLink from '../components/postLink';
+import PostPreview from '../components/PostPreview/PostPreview';
 import SEO from '../components/seo';
 import Layout from '../components/Layout/Layout'
 
-import '../components/postLink.scss';
+import '../components/PostPreview/PostPreview.scss';
+
 
 const BlogPageTemplate = ({
 	data: {
@@ -14,10 +15,12 @@ const BlogPageTemplate = ({
 	return (
 		<Layout>
 			<SEO title='Blog' />
-			<h2 className='blog-page-title'>Blog</h2>
+			<h1 className='blog-page-title'>Blog</h1>
+			<p className='blog-page-excerpt'>Acá podrás encontrar artículos cortos sobre desarrollo web y tecnología.</p>
+			
 			<div className='post-link-wrapper'>
 				{edges.map(edge => (
-					<PostLink key={edge.node.id} post={edge.node} />
+					<PostPreview key={edge.node.id} post={edge.node} />
 				))}
 			</div>
 		</Layout>
@@ -37,7 +40,7 @@ export const BlogPageQuery = graphql`
 						date(formatString: "MMMM DD, YYYY")
 						title
 						description
-						thumbnail
+						tags
 					}
 					fields {
 						slug

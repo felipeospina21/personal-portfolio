@@ -1,9 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import ImageBlog from '../components/ImageBlog';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import SEO from '../components/seo';
-
+import DateContainer from '../components/DateContainer/DateContainer';
+import TagsContainer from '../components/TagsContainer/TagsContainer';
 import './blogTemplate.scss';
 
 export default function Template({
@@ -15,17 +15,12 @@ export default function Template({
 		<>
 			<SEO title={frontmatter.title} description={frontmatter.description} />
 			<div className='blog-post-container'>
-				<ImageBlog
-					src={frontmatter.thumbnail}
-					alt={frontmatter.title}
-					className='blog-template-image'
-				/>
 				<div className='blog-post'>
-					<small>
-						<strong>{frontmatter.date}</strong>
-					</small>
 					<h2 className='blog-post-title'>{frontmatter.title}</h2>
-
+					<small>
+						<DateContainer date={frontmatter.date} />
+						<TagsContainer tags={frontmatter.tags} />
+					</small>
 					<MDXRenderer className='blog-post-content'>{mdx.body}</MDXRenderer>
 				</div>
 			</div>
@@ -42,7 +37,6 @@ export const pageQuery = graphql`
 				title
 				description
 				tags
-				thumbnail
 			}
 		}
 	}
