@@ -23,6 +23,14 @@ module.exports = {
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-sass`,
 		'gatsby-plugin-breakpoints',
+		`gatsby-transformer-yaml`,
+		{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+				name: `tags-list`,
+        path: `./content/`,
+      },
+    },
 		{
 			resolve: 'gatsby-plugin-react-svg',
 			options: {
