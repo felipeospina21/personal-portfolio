@@ -39,6 +39,7 @@ export const BlogPageQuery = graphql`
 						title
 						description
 						tags
+						thumbnail
 					}
 					fields {
 						slug

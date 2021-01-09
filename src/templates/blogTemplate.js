@@ -5,6 +5,7 @@ import SEO from '../components/seo';
 import DateContainer from '../components/DateContainer/DateContainer';
 import TagsContainer from '../components/TagsContainer/TagsContainer';
 import './blogTemplate.scss';
+import ImageBlog from '../components/ImageBlog';
 
 export default function Template({
 	data // this prop will be injected by the GraphQL query below.
@@ -15,12 +16,19 @@ export default function Template({
 		<>
 			<SEO title={frontmatter.title} description={frontmatter.description} />
 			<div className='blog-post-container'>
+				<h2 className='blog-post-title'>{frontmatter.title}</h2>
+				<small>
+					<DateContainer date={frontmatter.date} />
+					<TagsContainer tags={frontmatter.tags} />
+				</small>
+				<div className='blog-post-img-container'>
+					<ImageBlog
+						className='blog-post-img'
+						src={frontmatter.thumbnail}
+						alt='blog pic'
+					/>
+				</div>
 				<div className='blog-post'>
-					<h2 className='blog-post-title'>{frontmatter.title}</h2>
-					<small>
-						<DateContainer date={frontmatter.date} />
-						<TagsContainer tags={frontmatter.tags} />
-					</small>
 					<MDXRenderer className='blog-post-content'>{mdx.body}</MDXRenderer>
 				</div>
 			</div>
@@ -37,6 +45,7 @@ export const pageQuery = graphql`
 				title
 				description
 				tags
+				thumbnail
 			}
 		}
 	}

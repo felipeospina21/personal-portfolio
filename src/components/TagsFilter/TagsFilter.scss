@@ -2,24 +2,26 @@
     display: flex;
     flex-direction: column;
     max-width: 420px;
-    justify-content: left;
-
-    // border-top: 1px solid rgba(119, 117, 117, 0.4);
-    // border-bottom: 1px solid rgba(119, 117, 117, 0.4);
+    justify-content: center;
     padding: 0.5em 1em;
     margin: 1.5em auto;
+}
 
+.tags-filter-line{
+    border-top: 1px solid rgba(119, 117, 117, 0.4);
+    margin-bottom: 0.5em;
+    width: 60%;
 }
 
 .tags-filter-title{
-    margin: 0 1em ;
+    margin: 0 auto ;
     color: teal;
 }
 .tags-filter-container{
     margin: 0;
     display: flex;
     flex-wrap:wrap;
-    // justify-content: center;
+    justify-content: center;
     
 }
 

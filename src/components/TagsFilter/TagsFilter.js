@@ -10,6 +10,7 @@ const TagsFilter = ({ categories }) => {
 
 	return (
 		<div className='tags-filter-wrapper'>
+			<div className='tags-filter-line'></div>
 			<h4 className='tags-filter-title'>Tags</h4>
 			<div className='tags-filter-container'>
 				{categories.map(category => {
