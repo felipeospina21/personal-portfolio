@@ -25,10 +25,19 @@
     
 }
 
-.tags-filter-categorie{
+.tags-filter-category{
     margin:0.5em 0.2em;
     border: 1px solid var(--clr-text);
     border-radius: 5px;
+    background-color: transparent;
     padding: 0.4em 0.7em;
-    // background-color: rgba(0, 128, 128, 0.2);
+
+    &:focus{
+        background-color: rgba(0, 128, 128, 0.5);
+        outline: none;
+    }
+
+    &:hover{
+        background-color: rgba(0, 128, 128, 0.2);
+    }
 }

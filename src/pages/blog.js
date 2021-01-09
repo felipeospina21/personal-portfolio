@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import PostPreview from '../components/PostPreview/PostPreview';
 import SEO from '../components/seo';
@@ -6,6 +6,20 @@ import TagsFilter from '../components/TagsFilter/TagsFilter';
 import '../components/PostPreview/PostPreview.scss';
 
 const BlogPageTemplate = ({ data }) => {
+	const allPosts = [...data.allMdx.edges];
+	const [posts, setPosts] = useState([]);
+
+	const filterPostsByCategory = categoryName => {
+		const filteredPosts = allPosts.filter(post =>
+			post.node.frontmatter.tags.includes(categoryName)
+		);
+		setPosts(filteredPosts);
+	};
+
+	const filterAllPosts = () => {
+		setPosts(allPosts);
+	};
+
 	return (
 		<>
 			<SEO title='Blog' />
@@ -13,10 +27,14 @@ const BlogPageTemplate = ({ data }) => {
 			<p className='blog-page-excerpt'>
 				Acá podrás encontrar artículos cortos sobre desarrollo web y tecnología.
 			</p>
-			<TagsFilter categories={data.contentYaml.categories} />
+			<TagsFilter
+				categories={data.contentYaml.categories}
+				filterAllPosts={filterAllPosts}
+				filterPostsByCategory={filterPostsByCategory}
+			/>
 			<div className='post-link-wrapper'>
-				{data.allMdx.edges.map(edge => (
-					<PostPreview key={edge.node.id} post={edge.node} />
+				{posts.map(post => (
+					<PostPreview key={post.node.id} post={post.node} />
 				))}
 			</div>
 		</>
@@ -31,7 +49,7 @@ export const BlogPageQuery = graphql`
 			edges {
 				node {
 					id
-					excerpt(pruneLength: 250)
+					excerpt(pruneLength: 50)
 					frontmatter {
 						date(formatString: "MMMM DD, YYYY")
 						title
