@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 import { graphql } from 'gatsby';
-import PostPreview from '../components/PostPreview/PostPreview';
 import SEO from '../components/seo';
 import TagsFilter from '../components/TagsFilter/TagsFilter';
+import PostPrevWrap from '../components/PostPrevWrap/PostPrevWrap';
 import '../components/PostPreview/PostPreview.scss';
 
 const BlogPageTemplate = ({ data }) => {
 	const allPosts = [...data.allMdx.edges];
-	const [posts, setPosts] = useState([]);
+	const [filteredPosts, setFilteredPosts] = useState([]);
 
 	const filterPostsByCategory = categoryName => {
-		const filteredPosts = allPosts.filter(post =>
+		const filterByCategory = allPosts.filter(post =>
 			post.node.frontmatter.tags.includes(categoryName)
 		);
-		setPosts(filteredPosts);
+		setFilteredPosts(filterByCategory);
 	};
 
 	const filterAllPosts = () => {
-		setPosts(allPosts);
+		setFilteredPosts(allPosts);
 	};
 
 	return (
@@ -32,11 +32,11 @@ const BlogPageTemplate = ({ data }) => {
 				filterAllPosts={filterAllPosts}
 				filterPostsByCategory={filterPostsByCategory}
 			/>
-			<div className='post-link-wrapper'>
-				{posts.map(post => (
-					<PostPreview key={post.node.id} post={post.node} />
-				))}
-			</div>
+			{filteredPosts.length < 1 ? (
+				<PostPrevWrap postsArray={allPosts} />
+			) : (
+				<PostPrevWrap postsArray={filteredPosts} />
+			)}
 		</>
 	);
 };
