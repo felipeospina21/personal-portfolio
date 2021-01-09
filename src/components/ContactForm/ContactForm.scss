@@ -32,14 +32,14 @@
 }
 
 .contact-form-input, .contact-form-text-area, .contact-form{
-    border: 1px solid var(--clr-darker-blue) ;
+    border: 1px solid var(--clr-background) ;
     border-radius: 5px;
     background-color: var(--clr-lighter-blue);
 
 }
 
 .contact-form-input, .contact-form-text-area {
-    background-color: var(--clr-text);
+    background-color: var(--clr-background);
     outline: none;
 }
 
@@ -54,7 +54,7 @@
 
 .contact-form-submit-btn{
     background-color: var(--clr-contrast);
-    color: var(--clr-darker-blue);
+    color: var(--clr-text);
     padding: 0.8em 1.8em;
     margin: 1em;
     font-weight: 700;

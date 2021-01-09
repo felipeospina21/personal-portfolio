@@ -2,8 +2,8 @@
 .hero-wrapper{
     height: 50vh;
     // background:var(--clr-lighter-blue) ;
-    // background-color: black;
-    color: var(--clr-text);
+    background-color: var(--clr-text);
+    color: var(--clr-background);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +30,7 @@
 
 .hero-btn{
     background-color: var(--clr-contrast);
-    color: var(--clr-darker-blue);
+    color: var(--clr-text);
     padding: 0.8em 1.8em;
     font-weight: 700;
     border: none;

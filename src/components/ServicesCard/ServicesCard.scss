@@ -9,6 +9,7 @@
     padding: 0 0.8em;
     margin: 1em ;
     background-color: var(--clr-lighter-blue);
+    color: var(--clr-background);
 
     & h3{
         color: var(--clr-contrast);
@@ -46,7 +47,7 @@
 .service-card-logo{
     width: 100%;
     height: 100%;
-    color: var(--clr-text);
+    color: var(--clr-background);
     margin: 0;
 }
 

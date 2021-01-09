@@ -10,7 +10,7 @@
 }
 
 .footer-contact {
-	color: var(--clr-text);
+	color: var(--clr-background);
 	border-right: 0.1rem solid white;
 	display: flex;
 	flex-direction: column;
@@ -33,6 +33,7 @@
 
 .created-by {
 	font-size: 0.6rem;
+	font-weight: 600;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
@@ -65,7 +66,7 @@
 .social-logos {
 	margin: auto 1rem;
 	font-size: 1.2rem;
-	color: var(--clr-text);
+	color: var(--clr-background);
 	-webkit-transition: color ease-out 250ms;
 	transition: color ease-out 250ms;
 	-webkit-transition: font-size ease-out 250ms;
