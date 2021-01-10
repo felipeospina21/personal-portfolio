@@ -56,6 +56,7 @@ export const BlogPageQuery = graphql`
 						description
 						tags
 						thumbnail
+						imgAltText
 					}
 					fields {
 						slug

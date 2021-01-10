@@ -5,7 +5,7 @@ import './Hero.scss';
 const Hero = () => {
 	return (
 		<div className='hero-wrapper'>
-			<Image className='hero-img' src='background3.jpg' />
+			<Image className='hero-img' src='background3.jpg' alt='imagen abstracta de fondo' />
 			<div className='hero-container'>
 				<h1>Hola, soy Felipe</h1>
 				<h3>Me especializo en crear páginas web hechas a la medida.</h3>

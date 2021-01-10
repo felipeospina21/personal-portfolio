@@ -11,7 +11,11 @@ const PostPreview = ({ post }) => {
 			<Link to={post.fields.slug}>
 				<div className='post-preview-container'>
 					<div className='post-preview-img-container'>
-						<ImageBlog className='post-preview-img' src={post.frontmatter.thumbnail} alt='pic' />
+						<ImageBlog
+							className='post-preview-img'
+							src={post.frontmatter.thumbnail}
+							alt={post.frontmatter.imgAltText}
+						/>
 					</div>
 					<div className='post-preview-text-container'>
 						<h1 className='post-preview-title'>{post.frontmatter.title}</h1>

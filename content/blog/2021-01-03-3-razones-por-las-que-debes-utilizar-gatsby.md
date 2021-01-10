@@ -2,6 +2,7 @@
 title: 3 razones por las que debes utilizar Gatsby
 date: 2021-01-03T20:16:29.363Z
 thumbnail: /img/gatsby-astronaut.png
+imgAltText: Atronauta de Gatsby
 description: A continuación te explico 3 razones por las que debes utilizar
   Gatsby como herramienta para desarrollar sitios y apps web.
 tags:

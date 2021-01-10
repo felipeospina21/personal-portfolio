@@ -25,7 +25,7 @@ export default function Template({
 					<ImageBlog
 						className='blog-post-img'
 						src={frontmatter.thumbnail}
-						alt='blog pic'
+						alt={frontmatter.imgAltText}
 					/>
 				</div>
 				<div className='blog-post'>
@@ -46,6 +46,7 @@ export const pageQuery = graphql`
 				description
 				tags
 				thumbnail
+				imgAltText
 			}
 		}
 	}
