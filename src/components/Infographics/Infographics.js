@@ -3,8 +3,8 @@ import './Infographics.scss';
 
 const Infographics = () => {
 	const [facts] = useState([
-		'el 80% de las personas busca una empresa en internet antes de comprarle',
-		'Tu negocio tiene visibilidad 24/7'
+		'Antes de realizar una compra, el 80% de las personas busca en internet algún tipo de referencia sobre la empresa ',
+		'Tu negocio tiene visibilidad 24/7 y puedes diseñar y personalizar tu "vitrina" online para que sea atractiva para tus clientes'
 	]);
 	return (
 		<div className='Infographics-container'>

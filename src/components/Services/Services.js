@@ -34,7 +34,7 @@ const Services = () => {
 
 	return (
 		<div className='services-container'>
-				<h2>Beneficios</h2>
+				<h2 className='services-container-title'>características</h2>
 			<div className='services-cards-container'>
 				{services.map(service => {
 					const { title, description, icon } = service;
