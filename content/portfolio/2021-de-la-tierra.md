@@ -7,4 +7,5 @@ description: This page was built with gatsby js and scss. It uses the whtasapp
   api to redirect the checkout to whatsapp. It has a headless cms to manage the
   blog posts.
 url: delatierra.life
+templateKey: portfolio
 ---
