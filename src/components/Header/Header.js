@@ -11,8 +11,13 @@ const Header = () => {
 			<Link to='/' className='logo'>
 				<Logo />
 			</Link>
-			<div className='nav-links'>
-				<Link to='/blog'>Blog</Link>
+			<div className='nav-links-container'>
+				<span className='nav-links'>
+					<Link to='/portfolio'>Portfolio</Link>
+				</span>
+				<span className='nav-links'>
+					<Link to='/blog'>Blog</Link>
+				</span>
 			</div>
 			<SocialContainer />
 		</div>

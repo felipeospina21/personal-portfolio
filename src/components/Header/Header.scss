@@ -24,17 +24,19 @@
 	width: 10%;
 }
 
+.nav-links-container{
+	width: auto;
+	margin: auto 0;
+}
+
 .nav-links {
-	width: 30%;
 	font-weight: 400;
 	font-size: 1.2rem;
 	letter-spacing: 0.25rem;
 	padding-left: 1em;
 	margin: 0 ;
-	display: flex;
-	justify-content: left;
 	color: var(--clr-contrast);
-	border-left: 1px solid var(--clr-contrast);
+	// border-left: 1px solid var(--clr-contrast);
 	& a {
 		color: var(--clr-primary);
 
