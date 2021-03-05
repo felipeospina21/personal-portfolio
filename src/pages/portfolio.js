@@ -1,4 +1,10 @@
-// import React, { useState } from 'react';
+import React from 'react';
+
+const portfolio = () => {
+	return <div></div>;
+};
+
+export default portfolio;
 // import { graphql } from 'gatsby';
 // import SEO from '../components/seo';
 // import TagsFilter from '../components/TagsFilter/TagsFilter';
