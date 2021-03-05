@@ -7,7 +7,7 @@ import TagsContainer from '../components/TagsContainer/TagsContainer';
 import './blogTemplate.scss';
 import ImageBlog from '../components/ImageBlog';
 
-export default function Template({
+export default function blogTemplate({
 	data // this prop will be injected by the GraphQL query below.
 }) {
 	const { mdx } = data; // data.markdownRemark holds your post data

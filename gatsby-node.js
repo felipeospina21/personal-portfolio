@@ -1,9 +1,10 @@
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const path = require('path');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
 	const { createPage } = actions;
 
-	const blogPostTemplate = require.resolve(`./src/templates/blogTemplate.js`);
+	// const blogPostTemplate = require.resolve(`./src/templates/blogTemplate.js`);
 
 	const result = await graphql(`
 		{
@@ -13,6 +14,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 						id
 						fields {
 							slug
+						}
+						frontmatter {
+							title
+							templateKey
 						}
 					}
 				}
@@ -29,7 +34,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 	result.data.allMdx.edges.forEach(({ node }) => {
 		createPage({
 			path: node.fields.slug,
-			component: blogPostTemplate,
+			component: path.resolve(
+				`./src/templates/${String(node.frontmatter.templateKey)}.js`
+			),
 			context: {
 				// additional data can be passed via context
 				id: node.id
@@ -46,7 +53,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 		createNodeField({
 			node,
 			name: `slug`,
-			value: `/blog${slug}`
+			value: slug
 		});
 	}
 };

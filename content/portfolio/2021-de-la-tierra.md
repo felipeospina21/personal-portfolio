@@ -8,4 +8,7 @@ description: This page was built with gatsby js and scss. It uses the whtasapp
   blog posts.
 url: delatierra.life
 templateKey: portfolio
+tags:
+  - Gatsby
+  - React
 ---

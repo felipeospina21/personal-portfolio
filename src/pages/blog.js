@@ -45,7 +45,10 @@ export default BlogPageTemplate;
 
 export const BlogPageQuery = graphql`
 	query {
-		allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
+		allMdx(
+			filter: { frontmatter: { templateKey: { eq: "blog" } } }
+			sort: { order: DESC, fields: [frontmatter___date] }
+		) {
 			edges {
 				node {
 					id

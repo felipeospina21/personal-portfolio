@@ -55,6 +55,13 @@ collections:
       - { label: 'Img Alt Text', name: 'imgAltText', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Url', name: 'url', widget: 'string' }
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'relation'
+        collection: 'categories'
+        search_fields: ['categories.*.name']
+        value_field: 'categories.*.name'
+        multiple: true
      
 
   - label: 'Categories'

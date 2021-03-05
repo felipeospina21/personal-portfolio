@@ -25,12 +25,12 @@ module.exports = {
 		'gatsby-plugin-breakpoints',
 		`gatsby-transformer-yaml`,
 		{
-      resolve: `gatsby-source-filesystem`,
-      options: {
+			resolve: `gatsby-source-filesystem`,
+			options: {
 				name: `tags-list`,
-        path: `./content/`,
-      },
-    },
+				path: `./content/`
+			}
+		},
 		{
 			resolve: 'gatsby-plugin-react-svg',
 			options: {
@@ -43,7 +43,21 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `markdown-pages`,
+				path: `${__dirname}/content`
+			}
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `markdown-pages`,
 				path: `${__dirname}/content/blog`
+			}
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `markdown-pages`,
+				path: `${__dirname}/content/portfolio`
 			}
 		},
 		{
