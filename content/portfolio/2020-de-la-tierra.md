@@ -11,4 +11,5 @@ templateKey: portfolio
 tags:
   - Gatsby
   - React
+  - SCSS
 ---

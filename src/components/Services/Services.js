@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ServicesCard from '../ServicesCard/ServicesCard';
-import { BiLock, BiRocket, BiSortUp, BiAccessibility} from "react-icons/bi";
+import { BiLock, BiRocket, BiSortUp, BiAccessibility } from 'react-icons/bi';
+import Fade from 'react-reveal/Fade';
 
 import './Services.scss';
 
@@ -20,8 +21,7 @@ const Services = () => {
 		},
 		{
 			title: 'Escalabilidad',
-			description:
-				'Tu página puede crecer según tus necesidades de manera fácil',
+			description: 'Tu página puede crecer según tus necesidades de manera fácil',
 			icon: <BiSortUp className='service-card-logo' />
 		},
 		{
@@ -34,12 +34,19 @@ const Services = () => {
 
 	return (
 		<div className='services-container'>
-				<h2 className='services-container-title'>características</h2>
+			<h2 className='services-container-title'>características</h2>
 			<div className='services-cards-container'>
 				{services.map(service => {
 					const { title, description, icon } = service;
 					return (
-						<ServicesCard key={title} title={title} description={description} icon={icon} />
+						<Fade left>
+							<ServicesCard
+								key={title}
+								title={title}
+								description={description}
+								icon={icon}
+							/>
+						</Fade>
 					);
 				})}
 			</div>

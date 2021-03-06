@@ -1,10 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 import SEO from '../components/seo';
 import DateContainer from '../components/DateContainer/DateContainer';
-// import TagsContainer from '../components/TagsContainer/TagsContainer';
-// import './blogTemplate.scss';
+import TagsContainer from '../components/TagsContainer/TagsContainer';
+import './blogTemplate.scss';
 import ImageBlog from '../components/ImageBlog';
 
 export default function portfolioTemplate({ data }) {
@@ -17,7 +16,7 @@ export default function portfolioTemplate({ data }) {
 				<h2 className='blog-post-title'>{frontmatter.title}</h2>
 				<small>
 					<DateContainer date={frontmatter.date} />
-					{/* <TagsContainer tags={frontmatter.tags} /> */}
+					<TagsContainer tags={frontmatter.tags} />
 				</small>
 				<div className='blog-post-img-container'>
 					<ImageBlog

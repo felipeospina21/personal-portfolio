@@ -9,4 +9,6 @@ templateKey: portfolio
 tags:
   - Gatsby
   - React
+  - Chakra
+  - Headless CMS
 ---

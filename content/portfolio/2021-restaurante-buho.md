@@ -9,4 +9,5 @@ templateKey: portfolio
 tags:
   - Gatsby
   - React
+  - Chakra
 ---
