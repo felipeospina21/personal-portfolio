@@ -1,17 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import './ServicesCard.scss';
+import "./ServicesCard.scss";
 
-const ServicesCard = ({ title, description, icon }) => {
-	return (
-		<div className='services-card'>
-			<div className='service-card-title-container'>
-				<div className='service-card-logo-container'>{icon}</div>
-				<h3 className='service-card-title'>{title}</h3>
-			</div>
-			<p className='service-card-body'>{description}</p>
-		</div>
-	);
+const ServicesCard = ({ title }) => {
+  return (
+    <div className='services-card'>
+      <h3 className='service-card-title'>{title}</h3>
+    </div>
+  );
 };
 
 export default ServicesCard;

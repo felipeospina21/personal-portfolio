@@ -1,57 +1,43 @@
-import React, { useState } from 'react';
-import ServicesCard from '../ServicesCard/ServicesCard';
-import { BiLock, BiRocket, BiSortUp, BiAccessibility } from 'react-icons/bi';
-import Fade from 'react-reveal/Fade';
+import React, { useState } from "react";
+import ServicesCard from "../ServicesCard/ServicesCard";
+import Fade from "react-reveal/Fade";
 
-import './Services.scss';
+import "./Services.scss";
 
 const Services = () => {
-	const [services] = useState([
-		{
-			title: 'Velocidad',
-			description:
-				'Tu página tendrá una velocidad de carga incomparable, mejorando la experiencia del usuario.',
-			icon: <BiRocket className='service-card-logo' />
-		},
-		{
-			title: 'Seguridad',
-			description:
-				'Puedes estar tranquilo con la seguridad de tu página web ante acciones maliciosas como los famosos ataques DDOS.',
-			icon: <BiLock className='service-card-logo' />
-		},
-		{
-			title: 'Escalabilidad',
-			description: 'Tu página puede crecer según tus necesidades de manera fácil',
-			icon: <BiSortUp className='service-card-logo' />
-		},
-		{
-			title: 'Accesibilidad',
-			description:
-				'Todas las personas podrán acceder a tu página, sin importar si tienen limitaciones físicas.',
-			icon: <BiAccessibility className='service-card-logo' />
-		}
-	]);
+  const [skills] = useState([
+    "React",
+    "Gatsby",
+    "Javascript",
+    "Html",
+    "Css",
+    "Sass",
+    "Chakra",
+    "Firebase",
+    "Git",
+    "Github",
+    "Netlify",
+    "Netlify CMS",
+    "Figma",
+    "Python",
+    "Pandas",
+    "Selenium",
+  ]);
 
-	return (
-		<div className='services-container'>
-			<h2 className='services-container-title'>características</h2>
-			<div className='services-cards-container'>
-				{services.map(service => {
-					const { title, description, icon } = service;
-					return (
-						<Fade left>
-							<ServicesCard
-								key={title}
-								title={title}
-								description={description}
-								icon={icon}
-							/>
-						</Fade>
-					);
-				})}
-			</div>
-		</div>
-	);
+  return (
+    <div className='services-container'>
+      <h2>Habilidades</h2>
+      <div className='services-cards-container'>
+        {skills.map(skill => {
+          return (
+            <Fade left>
+              <ServicesCard key={skill} title={skill} />
+            </Fade>
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 
 export default Services;
