@@ -11,3 +11,6 @@ categories:
   - name: Headless CMS
   - name: Contentful
   - name: Html
+  - name: Python
+  - name: Pandas
+  - name: Selenium
