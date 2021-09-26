@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 import SEO from "../components/seo";
 import DateContainer from "../components/DateContainer/DateContainer";
 import TagsContainer from "../components/TagsContainer/TagsContainer";
@@ -30,6 +31,9 @@ export default function portfolioTemplate({ data }) {
             {frontmatter.url}
           </a>
         </div>
+        <div className='blog-post'>
+          <MDXRenderer className='blog-post-content'>{mdx.body}</MDXRenderer>
+        </div>
       </div>
     </>
   );
@@ -38,6 +42,7 @@ export default function portfolioTemplate({ data }) {
 export const pageQuery = graphql`
   query PortfolioQuery($id: String) {
     mdx(id: { eq: $id }) {
+      body
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

@@ -10,7 +10,13 @@ const Hero = () => {
         <h1>Hola, soy Felipe</h1>
         <h3>Me especializo en desarrollo web y automatización de procesos.</h3>
       </div>
-      <button className='hero-btn'>Conversemos</button>
+      <a
+        href='http://api.whatsapp.com/send?phone=573148871629'
+        rel='noreferrer'
+        target='_blank'
+        className='hero-btn'>
+        Conversemos
+      </a>
     </div>
   );
 };

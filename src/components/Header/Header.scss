@@ -6,9 +6,11 @@
 	top: 0px;
 	width: 100%;
     z-index: 200;
-    height: 70px;
+    height: auto;
+	min-height: 70px;
 	overflow: hidden;
 	display: flex;
+	flex-wrap: wrap;
 	// justify-content: space-between;
 	align-items: center;
 	background-color:var(--clr-lighter-blue)  ;
@@ -18,38 +20,36 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin:0.7em 1em;
+	margin: 1em;
 	font-size: 1.5rem;
 	color: var(--clr-contrast);
 	width: 10%;
 }
 
-.nav-links-container{
-	width: auto;
-	margin: auto 0;
-}
-
-.nav-links {
-	font-weight: 400;
-	font-size: 1.2rem;
-	letter-spacing: 0.25rem;
-	padding-left: 1em;
-	margin: 0 ;
+.toggle-menu {
+	font-size: 1.5rem;
 	color: var(--clr-contrast);
-	// border-left: 1px solid var(--clr-contrast);
-	& a {
-		color: var(--clr-primary);
+	background: transparent;
+	border-color: transparent;
+	cursor: pointer;
+	position: absolute;
+	right: 3.5rem;
+	top: 1em;
 
-		&:hover {
-			color: var(--clr-secondary);
-		}
+	&:focus {
+		outline: none;
 	}
-
 }
 
 
 @media screen and (min-width: $screen-md) {
+	.header{
+		height: 70px;
+	}
 
+	.toggle-menu {
+		display: none;
+	}
 }
 
 @media screen and (min-width: $screen-l) {
