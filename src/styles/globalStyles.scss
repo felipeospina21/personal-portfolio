@@ -4,7 +4,8 @@
 --clr-background: #fffeff;
 --clr-darker-blue:#212331;
 --clr-lighter-blue: #3e4254;
---clr-contrast: #e3a93b;
+--clr-contrast: #e3a83b;
+--clr-contrast-transparent: #e3a83b00;
 --clr-text:#1d1d1d;
 --main-font: 'Montserrat', 'Roboto', sans-serif;
 --title-font: 'Lato', 'Roboto', sans-serif;
@@ -22,6 +23,7 @@ body,
 html {
 	height: 100%;
 	font-family: var(--main-font);
+	// font-size: 16px;
 	overflow: auto;
 	margin: 0;
 	background-color: var(--clr-background);
