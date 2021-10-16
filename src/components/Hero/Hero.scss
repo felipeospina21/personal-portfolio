@@ -1,7 +1,7 @@
 @import '../../styles/breakingPoints.scss';
 
 .hero-wrapper{
-    height: 100vh;
+    height: calc(100vh - 70px);
     // background-color: var(--clr-text);
     background: linear-gradient(110deg, var(--clr-darker-blue)20%, var(--clr-contrast)150%);
     
@@ -25,25 +25,28 @@
         color: var(--clr-background);
         border-radius: 50%;
         width: 100vw;
-        height: 70vh;
+        height:50vh ;
     }
 
     & a{
         background-color: var(--clr-contrast);
         color: var(--clr-text);
-        padding: 0.8em 1.8em;
+        padding: 0.7em 1.2em;
         font-weight: 700;
         border: none;
         border-radius: 5px;
     }
 
     & h1{
-        font-size: 3.25rem;
+        font-size: 2.5rem;
+        color: var(--clr-background);
     }
 
     & h3{
         text-align: center;
         margin: 1em 0;
+        font-size: 1rem;
+        color: var(--clr-background);
     }
     & span{
         margin:0 auto;
@@ -51,17 +54,6 @@
 
 }
 
-.hero-btn{
-    background-color: var(--clr-contrast);
-    color: var(--clr-text);
-    padding: 0.8em 1.8em;
-    font-weight: 700;
-    border: none;
-    border-radius: 5px;
-    // position: absolute;
-    // bottom: 25px;
-
-}
 
 @media screen and (min-width:$screen-sm){
     .hero-container{
@@ -70,7 +62,10 @@
             height: 550px
         }
         & h1{
-            font-size: 4rem;
+            font-size: 5rem;
+        }
+        & h3{
+            font-size: 1.5rem;
         }
     }
 }

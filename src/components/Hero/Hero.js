@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import React from "react";
-import Image from "../image";
 import "./Hero.scss";
 
 const Hero = () => {
@@ -43,10 +42,8 @@ export const AnimatedDiv = ({ children }) => {
       },
     },
     hidden: {
-      backgroundColor: "#e3a83b00",
-      scale: [1, 2, 2, 1, 1],
-      rotate: [0, 0, 270, 270, 0],
-      borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+      backgroundColor: "transparent",
+      scale: [1, 2, 1],
     },
   };
   return (
@@ -70,7 +67,9 @@ const VisibilityTransition = ({ children }) => {
     visible: {
       opacity: 1,
       transition: {
-        delay: 2.2,
+        delay: 0.2,
+        duration: 2,
+        ease: "easeInOut",
       },
     },
     hidden: { opacity: 0 },
