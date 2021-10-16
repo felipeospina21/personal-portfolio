@@ -43,7 +43,7 @@ export const AnimatedDiv = ({ children }) => {
     },
     hidden: {
       backgroundColor: "transparent",
-      scale: [1, 2, 1],
+      scale: [1, 1.2, 1],
     },
   };
   return (
