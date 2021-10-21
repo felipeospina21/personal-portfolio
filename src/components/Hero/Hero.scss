@@ -23,9 +23,9 @@
         // padding: 1em;
         background-color: var(--clr-contrast);
         color: var(--clr-background);
-        border-radius: 50%;
+        // border-radius: 50%;
         width: 100vw;
-        height:50vh ;
+        height:30vh ;
     }
 
     & a{
@@ -36,6 +36,8 @@
         border: none;
         border-radius: 5px;
         font-size:0.9rem;
+        justify-content: center;
+        margin:auto;
     }
 
     & h1{

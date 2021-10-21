@@ -14,16 +14,12 @@ const Hero = () => {
             <h3>Front-End Dev</h3>
           </VisibilityTransition>
         </AnimatedDiv>
-      </div>
 
-      <div className='hero-container'>
         <VisibilityTransition>
           <a
             href='http://api.whatsapp.com/send?phone=573148871629'
             rel='noreferrer'
-            target='_blank'
-            // className='hero-btn'
-          >
+            target='_blank'>
             Conversemos
           </a>
         </VisibilityTransition>
@@ -66,6 +62,7 @@ const VisibilityTransition = ({ children }) => {
   const variants = {
     visible: {
       opacity: 1,
+      display: "flex",
       transition: {
         delay: 0.2,
         duration: 2,
