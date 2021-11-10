@@ -7,7 +7,7 @@ imgAltText: Verospi portfolio web page home image
 description: >
   Portafolio para maquilladora profesional, con CMS integrado para el manejo y
   edición de las categorías.
-url: https://verospi.netlify.app/
+url: https://www.verospimakeup.com/
 tags:
   - Gatsby
   - React
